@@ -197,6 +197,10 @@ kept overlay) would complete the story.
   not entities, and `prepare()` made debugging the request body trivial.
 - **Generated docs and agent guides** (README, REFERENCE, AGENTS.md, CLAUDE.md)
   are thorough and genuinely useful.
+- **Regeneration is deterministic.** I cloned the pushed repo, ran
+  `npm install && npm run generate` on a clean checkout, and `git status` was
+  empty: the same spec produced byte-identical output. That is exactly the
+  property the pitch claims, and it held.
 
 ## 7. Suggestions
 
