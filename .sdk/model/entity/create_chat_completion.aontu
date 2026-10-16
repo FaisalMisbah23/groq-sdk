@@ -1,0 +1,313 @@
+# Entity: create_chat_completion
+
+main: kit: entity: create_chat_completion: {
+
+  alias: field: {}
+
+  fields: {
+    choices: {
+      h: "Choices"
+      n: "choices"
+      r: true
+      sh: "A list of chat completion choices."
+      t: "`$ARRAY`"
+    }
+    created: {
+      h: "Created"
+      n: "created"
+      r: true
+      sh: "The Unix timestamp (in seconds) of when the chat completion was created."
+      t: "`$INTEGER`"
+    }
+    frequency_penalty: {
+      h: "Frequency Penalty"
+      n: "frequency_penalty"
+      r: false
+      sh: "Number between -2.0 and 2.0."
+      t: "`$NUMBER`"
+    }
+    function_call: {
+      de: true
+      h: "Function Call"
+      n: "function_call"
+      r: false
+      sh: "Deprecated in favor of `tool_choice`."
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    functions: {
+      de: true
+      h: "Functions"
+      n: "functions"
+      r: false
+      sh: "Deprecated in favor of `tools`."
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "A unique identifier for the chat completion."
+      t: "`$STRING`"
+    }
+    logit_bias: {
+      h: "Logit Bias"
+      n: "logit_bias"
+      r: false
+      sh: "This is not yet supported by any of our models."
+      t: "`$OBJECT`"
+    }
+    logprobs: {
+      h: "Logprobs"
+      n: "logprobs"
+      r: false
+      sh: "This is not yet supported by any of our models."
+      t: "`$BOOLEAN`"
+    }
+    max_tokens: {
+      h: "Max Tokens"
+      n: "max_tokens"
+      r: false
+      sh: "The maximum number of tokens that can be generated in the chat completion."
+      t: "`$INTEGER`"
+    }
+    messages: {
+      h: "Messages"
+      n: "messages"
+      r: true
+      sh: "A list of messages comprising the conversation so far."
+      t: "`$ARRAY`"
+      union: {
+        branches: 2
+        count: 2
+        depth: 8
+      }
+    }
+    model: {
+      h: "Model"
+      n: "model"
+      r: true
+      sh: "The model used for the chat completion."
+      t: "`$STRING`"
+    }
+    n: {
+      h: "N"
+      n: "n"
+      r: false
+      sh: "How many chat completion choices to generate for each input message."
+      t: "`$INTEGER`"
+    }
+    object: {
+      h: "Object"
+      n: "object"
+      r: true
+      sh: "The object type, which is always `chat.completion`."
+      t: "`$STRING`"
+    }
+    parallel_tool_calls: {
+      h: "Parallel Tool Calls"
+      n: "parallel_tool_calls"
+      r: false
+      sh: "Whether to enable parallel function calling during tool use."
+      t: "`$BOOLEAN`"
+    }
+    presence_penalty: {
+      h: "Presence Penalty"
+      n: "presence_penalty"
+      r: false
+      sh: "Number between -2.0 and 2.0."
+      t: "`$NUMBER`"
+    }
+    response_format: {
+      h: "Response Format"
+      n: "response_format"
+      r: false
+      sh: "An object specifying the format that the model must output."
+      t: "`$OBJECT`"
+    }
+    seed: {
+      h: "Seed"
+      n: "seed"
+      r: false
+      sh: "If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same `seed` and parameters should return the same result."
+      t: "`$INTEGER`"
+    }
+    stop: {
+      h: "Stop"
+      n: "stop"
+      r: false
+      sh: "Up to 4 sequences where the API will stop generating further tokens."
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    stream: {
+      h: "Stream"
+      n: "stream"
+      r: false
+      sh: "If set, partial message deltas will be sent."
+      t: "`$BOOLEAN`"
+    }
+    system_fingerprint: {
+      h: "System Fingerprint"
+      n: "system_fingerprint"
+      r: false
+      sh: "This fingerprint represents the backend configuration that the model runs with."
+      t: "`$STRING`"
+    }
+    temperature: {
+      h: "Temperature"
+      n: "temperature"
+      r: false
+      sh: "What sampling temperature to use, between 0 and 2."
+      t: "`$NUMBER`"
+    }
+    tool_choice: {
+      h: "Tool Choice"
+      n: "tool_choice"
+      r: false
+      sh: "Controls which (if any) tool is called by the model."
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    tools: {
+      h: "Tools"
+      n: "tools"
+      r: false
+      sh: "A list of tools the model may call."
+      t: "`$ARRAY`"
+    }
+    top_logprobs: {
+      h: "Top Logprobs"
+      n: "top_logprobs"
+      r: false
+      sh: "This is not yet supported by any of our models."
+      t: "`$INTEGER`"
+    }
+    top_p: {
+      h: "Top P"
+      n: "top_p"
+      r: false
+      sh: "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass."
+      t: "`$NUMBER`"
+    }
+    usage: {
+      h: "Usage"
+      n: "usage"
+      r: true
+      sh: "Usage statistics for the completion request."
+      t: "`$OBJECT`"
+    }
+    user: {
+      h: "User"
+      n: "user"
+      r: false
+      sh: "A unique identifier representing your end-user, which can help us monitor and detect abuse."
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "create_chat_completion"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "frequency_penalty"
+            "function_call"
+            "functions"
+            "logit_bias"
+            "logprobs"
+            "max_tokens"
+            "messages"
+            "model"
+            "n"
+            "parallel_tool_calls"
+            "presence_penalty"
+            "response_format"
+            "seed"
+            "stop"
+            "stream"
+            "temperature"
+            "tool_choice"
+            "tools"
+            "top_logprobs"
+            "top_p"
+            "user"
+          ]
+          co: {
+            id: "POST /openai/v1/chat/completions"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/openai/v1/chat/completions"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "openai"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "chat"
+            }
+            {
+              lit: "completions"
+            }
+          ]
+          t: {
+            req: {
+              frequency_penalty: "`reqdata.frequency_penalty`"
+              function_call: "`reqdata.function_call`"
+              functions: "`reqdata.functions`"
+              logit_bias: "`reqdata.logit_bias`"
+              logprobs: "`reqdata.logprobs`"
+              max_tokens: "`reqdata.max_tokens`"
+              messages: "`reqdata.messages`"
+              model: "`reqdata.model`"
+              n: "`reqdata.n`"
+              parallel_tool_calls: "`reqdata.parallel_tool_calls`"
+              presence_penalty: "`reqdata.presence_penalty`"
+              response_format: "`reqdata.response_format`"
+              seed: "`reqdata.seed`"
+              stop: "`reqdata.stop`"
+              stream: "`reqdata.stream`"
+              temperature: "`reqdata.temperature`"
+              tool_choice: "`reqdata.tool_choice`"
+              tools: "`reqdata.tools`"
+              top_logprobs: "`reqdata.top_logprobs`"
+              top_p: "`reqdata.top_p`"
+              user: "`reqdata.user`"
+            }
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

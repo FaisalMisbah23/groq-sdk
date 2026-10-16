@@ -1,0 +1,7 @@
+# Flows
+
+@"./BasicCreateChatCompletionFlow.aontu"
+@"./BasicCreateEmbeddingFlow.aontu"
+@"./BasicCreateTranscriptionResponseJsonFlow.aontu"
+@"./BasicCreateTranslationResponseJsonFlow.aontu"
+@"./BasicModelFlow.aontu"

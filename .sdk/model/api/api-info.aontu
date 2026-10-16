@@ -1,0 +1,32 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        email: "support@groq.com"
+        name: "Groq Support"
+      }
+      description: "Specification of the Groq cloud API"
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "api_key"
+        type: "http"
+      }
+      servers: [
+        {
+          url: "https://api.groq.com"
+        }
+      ]
+      summary: "Specification of the Groq cloud API"
+      termsOfService: "TBD"
+      title: "GroqCloud API Swagger"
+      version: "2.0"
+      website: "https://groq.com"
+    }
+  }
+}
+

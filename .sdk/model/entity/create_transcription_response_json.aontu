@@ -1,0 +1,88 @@
+# Entity: create_transcription_response_json
+
+main: kit: entity: create_transcription_response_json: {
+
+  alias: field: {}
+
+  fields: {
+    text: {
+      h: "Text"
+      n: "text"
+      r: true
+      sh: "The transcribed text."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "create_transcription_response_json"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /openai/v1/audio/transcriptions"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/openai/v1/audio/transcriptions"
+          rb: {
+            fields: [
+              {
+                binary: true
+                name: "file"
+              }
+              {
+                name: "language"
+              }
+              {
+                name: "model"
+              }
+              {
+                name: "prompt"
+              }
+              {
+                name: "response_format"
+              }
+              {
+                name: "temperature"
+              }
+              {
+                list: true
+                name: "timestamp_granularities"
+              }
+            ]
+            kind: "multipart"
+            media: "multipart/form-data"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "openai"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "audio"
+            }
+            {
+              lit: "transcriptions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

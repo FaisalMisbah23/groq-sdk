@@ -1,0 +1,72 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 5
+  metrics: count: path: 6
+  metrics: count: method: 7
+
+  entity: create_chat_completion: {
+    path: "/openai/v1/chat/completions": {
+      op: create: method: *POST
+      op: create: transform: req: "frequency_penalty": *("`reqdata.frequency_penalty`")|top
+      op: create: transform: req: "function_call": *("`reqdata.function_call`")|top
+      op: create: transform: req: "functions": *("`reqdata.function`")|top
+      op: create: transform: req: "logit_bias": *("`reqdata.logit_bia`")|top
+      op: create: transform: req: "logprobs": *("`reqdata.logprob`")|top
+      op: create: transform: req: "max_tokens": *("`reqdata.max_token`")|top
+      op: create: transform: req: "messages": *("`reqdata.message`")|top
+      op: create: transform: req: "model": *("`reqdata.model`")|top
+      op: create: transform: req: "n": *("`reqdata.n`")|top
+      op: create: transform: req: "parallel_tool_calls": *("`reqdata.parallel_tool_call`")|top
+      op: create: transform: req: "presence_penalty": *("`reqdata.presence_penalty`")|top
+      op: create: transform: req: "response_format": *("`reqdata.response_format`")|top
+      op: create: transform: req: "seed": *("`reqdata.seed`")|top
+      op: create: transform: req: "stop": *("`reqdata.stop`")|top
+      op: create: transform: req: "stream": *("`reqdata.stream`")|top
+      op: create: transform: req: "temperature": *("`reqdata.temperature`")|top
+      op: create: transform: req: "tool_choice": *("`reqdata.tool_choice`")|top
+      op: create: transform: req: "tools": *("`reqdata.tool`")|top
+      op: create: transform: req: "top_logprobs": *("`reqdata.top_logprob`")|top
+      op: create: transform: req: "top_p": *("`reqdata.top_p`")|top
+      op: create: transform: req: "user": *("`reqdata.user`")|top
+    }
+  }
+
+  entity: create_embedding: {
+    path: "/openai/v1/embeddings": {
+      op: create: method: *POST
+      op: create: transform: req: "encoding_format": *("`reqdata.encoding_format`")|top
+      op: create: transform: req: "input": *("`reqdata.input`")|top
+      op: create: transform: req: "model": *("`reqdata.model`")|top
+      op: create: transform: req: "user": *("`reqdata.user`")|top
+    }
+  }
+
+  entity: create_transcription_response_json: {
+    path: "/openai/v1/audio/transcriptions": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: create_translation_response_json: {
+    path: "/openai/v1/audio/translations": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: model: {
+    path: "/openai/v1/models": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/openai/v1/models/{model}": {
+      rename: param: "model": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+}

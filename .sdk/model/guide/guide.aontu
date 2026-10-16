@@ -1,0 +1,28 @@
+# Guide
+
+@"@voxgig/apidef/model/guide.aontu"
+
+@"./base-guide.aontu"
+
+
+# --- Corrections to how apidef read this spec -------------------------------
+#
+# apidef's request transform singularises a request field whose name ends in
+# "s": `messages` was mapped to `reqdata.message`, a field the caller cannot
+# set, so the generated request body omitted it and Groq rejected the call
+# with 400 "'messages' : property 'messages' is missing". The same happened
+# to every other field ending in "s". Corrected here; see REPORT.md.
+
+guide: entity: create_chat_completion: path: "/openai/v1/chat/completions": op: create: transform: req: {
+  "messages": "`reqdata.messages`"
+  "tools": "`reqdata.tools`"
+  "functions": "`reqdata.functions`"
+  "logit_bias": "`reqdata.logit_bias`"
+  "logprobs": "`reqdata.logprobs`"
+  "max_tokens": "`reqdata.max_tokens`"
+  "parallel_tool_calls": "`reqdata.parallel_tool_calls`"
+  "top_logprobs": "`reqdata.top_logprobs`"
+}
+
+
+

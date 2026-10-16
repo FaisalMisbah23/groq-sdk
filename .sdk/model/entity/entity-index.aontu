@@ -1,0 +1,7 @@
+# Entity Models
+
+@"./create_chat_completion.aontu"
+@"./create_embedding.aontu"
+@"./create_transcription_response_json.aontu"
+@"./create_translation_response_json.aontu"
+@"./model.aontu"

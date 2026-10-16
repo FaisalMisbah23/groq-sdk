@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "create_embedding": {
+      "CREATE_EMBEDDING00": {
+        "data": [],
+        "encoding_format": "s47",
+        "input": "s48",
+        "model": "s49",
+        "object": "s4a",
+        "usage": {},
+        "user": "s4c",
+        "id": "CREATE_EMBEDDING00"
+      },
+      "CREATE_EMBEDDING01": {
+        "data": [],
+        "encoding_format": "s8d",
+        "input": "s8e",
+        "model": "s8f",
+        "object": "s90",
+        "usage": {},
+        "user": "s92",
+        "id": "CREATE_EMBEDDING01"
+      },
+      "CREATE_EMBEDDING02": {
+        "data": [],
+        "encoding_format": "sd3",
+        "input": "sd4",
+        "model": "sd5",
+        "object": "sd6",
+        "usage": {},
+        "user": "sd8",
+        "id": "CREATE_EMBEDDING02"
+      }
+    }
+  },
+  "new": {
+    "create_embedding": {
+      "create_embedding_ref01": {
+        "data": [],
+        "encoding_format": "s119",
+        "input": "s11a",
+        "model": "s11b",
+        "object": "s11c",
+        "usage": {},
+        "user": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "POST /openai/v1/embeddings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

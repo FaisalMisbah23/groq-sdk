@@ -1,0 +1,1490 @@
+{
+  "NAME": "GROQ",
+  "Name": "Groq",
+  "def": "groq-openapi.yml",
+  "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "Faisal Misbah",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "create_chat_completion": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "choices": {
+              "a": true,
+              "h": "Choices",
+              "n": "choices",
+              "r": true,
+              "sh": "A list of chat completion choices.",
+              "t": "`$ARRAY`"
+            },
+            "created": {
+              "a": true,
+              "h": "Created",
+              "n": "created",
+              "r": true,
+              "sh": "The Unix timestamp (in seconds) of when the chat completion was created.",
+              "t": "`$INTEGER`"
+            },
+            "frequency_penalty": {
+              "a": true,
+              "h": "Frequency Penalty",
+              "n": "frequency_penalty",
+              "r": false,
+              "sh": "Number between -2.0 and 2.0.",
+              "t": "`$NUMBER`"
+            },
+            "function_call": {
+              "a": true,
+              "de": true,
+              "h": "Function Call",
+              "n": "function_call",
+              "r": false,
+              "sh": "Deprecated in favor of `tool_choice`.",
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "functions": {
+              "a": true,
+              "de": true,
+              "h": "Functions",
+              "n": "functions",
+              "r": false,
+              "sh": "Deprecated in favor of `tools`.",
+              "t": "`$ARRAY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "A unique identifier for the chat completion.",
+              "t": "`$STRING`"
+            },
+            "logit_bias": {
+              "a": true,
+              "h": "Logit Bias",
+              "n": "logit_bias",
+              "r": false,
+              "sh": "This is not yet supported by any of our models.",
+              "t": "`$OBJECT`"
+            },
+            "logprobs": {
+              "a": true,
+              "h": "Logprobs",
+              "n": "logprobs",
+              "r": false,
+              "sh": "This is not yet supported by any of our models.",
+              "t": "`$BOOLEAN`"
+            },
+            "max_tokens": {
+              "a": true,
+              "h": "Max Tokens",
+              "n": "max_tokens",
+              "r": false,
+              "sh": "The maximum number of tokens that can be generated in the chat completion.",
+              "t": "`$INTEGER`"
+            },
+            "messages": {
+              "a": true,
+              "h": "Messages",
+              "n": "messages",
+              "r": true,
+              "sh": "A list of messages comprising the conversation so far.",
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 2,
+                "depth": 8
+              }
+            },
+            "model": {
+              "a": true,
+              "h": "Model",
+              "n": "model",
+              "r": true,
+              "sh": "The model used for the chat completion.",
+              "t": "`$STRING`"
+            },
+            "n": {
+              "a": true,
+              "h": "N",
+              "n": "n",
+              "r": false,
+              "sh": "How many chat completion choices to generate for each input message.",
+              "t": "`$INTEGER`"
+            },
+            "object": {
+              "a": true,
+              "h": "Object",
+              "n": "object",
+              "r": true,
+              "sh": "The object type, which is always `chat.completion`.",
+              "t": "`$STRING`"
+            },
+            "parallel_tool_calls": {
+              "a": true,
+              "h": "Parallel Tool Calls",
+              "n": "parallel_tool_calls",
+              "r": false,
+              "sh": "Whether to enable parallel function calling during tool use.",
+              "t": "`$BOOLEAN`"
+            },
+            "presence_penalty": {
+              "a": true,
+              "h": "Presence Penalty",
+              "n": "presence_penalty",
+              "r": false,
+              "sh": "Number between -2.0 and 2.0.",
+              "t": "`$NUMBER`"
+            },
+            "response_format": {
+              "a": true,
+              "h": "Response Format",
+              "n": "response_format",
+              "r": false,
+              "sh": "An object specifying the format that the model must output.",
+              "t": "`$OBJECT`"
+            },
+            "seed": {
+              "a": true,
+              "h": "Seed",
+              "n": "seed",
+              "r": false,
+              "sh": "If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same `seed` and parameters should return the same result.",
+              "t": "`$INTEGER`"
+            },
+            "stop": {
+              "a": true,
+              "h": "Stop",
+              "n": "stop",
+              "r": false,
+              "sh": "Up to 4 sequences where the API will stop generating further tokens.",
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "stream": {
+              "a": true,
+              "h": "Stream",
+              "n": "stream",
+              "r": false,
+              "sh": "If set, partial message deltas will be sent.",
+              "t": "`$BOOLEAN`"
+            },
+            "system_fingerprint": {
+              "a": true,
+              "h": "System Fingerprint",
+              "n": "system_fingerprint",
+              "r": false,
+              "sh": "This fingerprint represents the backend configuration that the model runs with.",
+              "t": "`$STRING`"
+            },
+            "temperature": {
+              "a": true,
+              "h": "Temperature",
+              "n": "temperature",
+              "r": false,
+              "sh": "What sampling temperature to use, between 0 and 2.",
+              "t": "`$NUMBER`"
+            },
+            "tool_choice": {
+              "a": true,
+              "h": "Tool Choice",
+              "n": "tool_choice",
+              "r": false,
+              "sh": "Controls which (if any) tool is called by the model.",
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "tools": {
+              "a": true,
+              "h": "Tools",
+              "n": "tools",
+              "r": false,
+              "sh": "A list of tools the model may call.",
+              "t": "`$ARRAY`"
+            },
+            "top_logprobs": {
+              "a": true,
+              "h": "Top Logprobs",
+              "n": "top_logprobs",
+              "r": false,
+              "sh": "This is not yet supported by any of our models.",
+              "t": "`$INTEGER`"
+            },
+            "top_p": {
+              "a": true,
+              "h": "Top P",
+              "n": "top_p",
+              "r": false,
+              "sh": "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass.",
+              "t": "`$NUMBER`"
+            },
+            "usage": {
+              "a": true,
+              "h": "Usage",
+              "n": "usage",
+              "r": true,
+              "sh": "Usage statistics for the completion request.",
+              "t": "`$OBJECT`"
+            },
+            "user": {
+              "a": true,
+              "h": "User",
+              "n": "user",
+              "r": false,
+              "sh": "A unique identifier representing your end-user, which can help us monitor and detect abuse.",
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "create_chat_completion",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "frequency_penalty",
+                    "function_call",
+                    "functions",
+                    "logit_bias",
+                    "logprobs",
+                    "max_tokens",
+                    "messages",
+                    "model",
+                    "n",
+                    "parallel_tool_calls",
+                    "presence_penalty",
+                    "response_format",
+                    "seed",
+                    "stop",
+                    "stream",
+                    "temperature",
+                    "tool_choice",
+                    "tools",
+                    "top_logprobs",
+                    "top_p",
+                    "user"
+                  ],
+                  "co": {
+                    "id": "POST /openai/v1/chat/completions",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/openai/v1/chat/completions",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "openai"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "chat"
+                    },
+                    {
+                      "lit": "completions"
+                    }
+                  ],
+                  "t": {
+                    "req": {
+                      "frequency_penalty": "`reqdata.frequency_penalty`",
+                      "function_call": "`reqdata.function_call`",
+                      "functions": "`reqdata.functions`",
+                      "logit_bias": "`reqdata.logit_bias`",
+                      "logprobs": "`reqdata.logprobs`",
+                      "max_tokens": "`reqdata.max_tokens`",
+                      "messages": "`reqdata.messages`",
+                      "model": "`reqdata.model`",
+                      "n": "`reqdata.n`",
+                      "parallel_tool_calls": "`reqdata.parallel_tool_calls`",
+                      "presence_penalty": "`reqdata.presence_penalty`",
+                      "response_format": "`reqdata.response_format`",
+                      "seed": "`reqdata.seed`",
+                      "stop": "`reqdata.stop`",
+                      "stream": "`reqdata.stream`",
+                      "temperature": "`reqdata.temperature`",
+                      "tool_choice": "`reqdata.tool_choice`",
+                      "tools": "`reqdata.tools`",
+                      "top_logprobs": "`reqdata.top_logprobs`",
+                      "top_p": "`reqdata.top_p`",
+                      "user": "`reqdata.user`"
+                    },
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "create_embedding": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "data": {
+              "a": true,
+              "h": "Data",
+              "n": "data",
+              "r": true,
+              "sh": "The list of embeddings generated by the model.",
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 3
+              }
+            },
+            "encoding_format": {
+              "a": true,
+              "h": "Encoding Format",
+              "n": "encoding_format",
+              "r": false,
+              "sh": "The format to return the embeddings in.",
+              "t": "`$STRING`"
+            },
+            "input": {
+              "a": true,
+              "h": "Input",
+              "n": "input",
+              "r": true,
+              "sh": "Input text to embed, encoded as a string or array of tokens.",
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "model": {
+              "a": true,
+              "h": "Model",
+              "n": "model",
+              "r": true,
+              "sh": "The name of the model used to generate the embedding.",
+              "t": "`$STRING`"
+            },
+            "object": {
+              "a": true,
+              "h": "Object",
+              "n": "object",
+              "r": true,
+              "sh": "The object type, which is always \"list\".",
+              "t": "`$STRING`"
+            },
+            "usage": {
+              "a": true,
+              "h": "Usage",
+              "n": "usage",
+              "r": true,
+              "sh": "The usage information for the request.",
+              "t": "`$OBJECT`"
+            },
+            "user": {
+              "a": true,
+              "h": "User",
+              "n": "user",
+              "r": false,
+              "sh": "A unique identifier representing your end-user, which can help us monitor and detect abuse.",
+              "t": "`$STRING`"
+            }
+          },
+          "name": "create_embedding",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "encoding_format",
+                    "input",
+                    "model",
+                    "user"
+                  ],
+                  "co": {
+                    "id": "POST /openai/v1/embeddings",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/openai/v1/embeddings",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "openai"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "embeddings"
+                    }
+                  ],
+                  "t": {
+                    "req": {
+                      "encoding_format": "`reqdata.encoding_format`",
+                      "input": "`reqdata.input`",
+                      "model": "`reqdata.model`",
+                      "user": "`reqdata.user`"
+                    },
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "create_transcription_response_json": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "text": {
+              "a": true,
+              "h": "Text",
+              "n": "text",
+              "r": true,
+              "sh": "The transcribed text.",
+              "t": "`$STRING`"
+            }
+          },
+          "name": "create_transcription_response_json",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /openai/v1/audio/transcriptions",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/openai/v1/audio/transcriptions",
+                  "q": {},
+                  "r": {},
+                  "rb": {
+                    "fields": [
+                      {
+                        "binary": true,
+                        "name": "file"
+                      },
+                      {
+                        "name": "language"
+                      },
+                      {
+                        "name": "model"
+                      },
+                      {
+                        "name": "prompt"
+                      },
+                      {
+                        "name": "response_format"
+                      },
+                      {
+                        "name": "temperature"
+                      },
+                      {
+                        "list": true,
+                        "name": "timestamp_granularities"
+                      }
+                    ],
+                    "kind": "multipart",
+                    "media": "multipart/form-data"
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "openai"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "audio"
+                    },
+                    {
+                      "lit": "transcriptions"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "create_translation_response_json": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "text": {
+              "a": true,
+              "h": "Text",
+              "n": "text",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "create_translation_response_json",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /openai/v1/audio/translations",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/openai/v1/audio/translations",
+                  "q": {},
+                  "r": {},
+                  "rb": {
+                    "fields": [
+                      {
+                        "binary": true,
+                        "name": "file"
+                      },
+                      {
+                        "name": "model"
+                      },
+                      {
+                        "name": "prompt"
+                      },
+                      {
+                        "name": "response_format"
+                      },
+                      {
+                        "name": "temperature"
+                      }
+                    ],
+                    "kind": "multipart",
+                    "media": "multipart/form-data"
+                  },
+                  "rs": {
+                    "alternatives": [
+                      {
+                        "kind": "raw",
+                        "media": "text/plain"
+                      }
+                    ],
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "openai"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "audio"
+                    },
+                    {
+                      "lit": "translations"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "model": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "created": {
+              "a": true,
+              "h": "Created",
+              "n": "created",
+              "r": true,
+              "sh": "The Unix timestamp (in seconds) when the model was created.",
+              "t": "`$INTEGER`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "The model identifier, which can be referenced in the API endpoints.",
+              "t": "`$STRING`"
+            },
+            "object": {
+              "a": true,
+              "h": "Object",
+              "n": "object",
+              "r": true,
+              "sh": "The object type, which is always \"model\".",
+              "t": "`$STRING`"
+            },
+            "owned_by": {
+              "a": true,
+              "h": "Owned By",
+              "n": "owned_by",
+              "r": true,
+              "sh": "The organization that owns the model.",
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "model",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /openai/v1/models",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/openai/v1/models",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "openai"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "models"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /openai/v1/models/{model}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "model",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/openai/v1/models/{model}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "model": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "openai"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "models"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "remove": {
+              "input": "data",
+              "name": "remove",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "DELETE /openai/v1/models/{model}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "model",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "DELETE",
+                  "o": "/openai/v1/models/{model}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "model": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "openai"
+                    },
+                    {
+                      "lit": "v1"
+                    },
+                    {
+                      "lit": "models"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "py": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicCreateChatCompletionFlow": {
+          "active": true,
+          "entity": "create_chat_completion",
+          "key$": "BasicCreateChatCompletionFlow",
+          "kind": "basic",
+          "name": "BasicCreateChatCompletionFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "create_chat_completion_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicCreateEmbeddingFlow": {
+          "active": true,
+          "entity": "create_embedding",
+          "key$": "BasicCreateEmbeddingFlow",
+          "kind": "basic",
+          "name": "BasicCreateEmbeddingFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "create_embedding_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicCreateTranscriptionResponseJsonFlow": {
+          "active": true,
+          "entity": "create_transcription_response_json",
+          "key$": "BasicCreateTranscriptionResponseJsonFlow",
+          "kind": "basic",
+          "name": "BasicCreateTranscriptionResponseJsonFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "create_transcription_response_json_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicCreateTranslationResponseJsonFlow": {
+          "active": true,
+          "entity": "create_translation_response_json",
+          "key$": "BasicCreateTranslationResponseJsonFlow",
+          "kind": "basic",
+          "name": "BasicCreateTranslationResponseJsonFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "create_translation_response_json_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicModelFlow": {
+          "active": true,
+          "entity": "model",
+          "key$": "BasicModelFlow",
+          "kind": "basic",
+          "name": "BasicModelFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "model_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "model_ref01",
+                "srcdatavar": "model_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "model01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-model_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "contact": {
+          "email": "support@groq.com",
+          "name": "Groq Support"
+        },
+        "description": "Specification of the Groq cloud API",
+        "security": {
+          "in": "header",
+          "name": "Authorization",
+          "prefix": "Bearer",
+          "scheme": "api_key",
+          "type": "http"
+        },
+        "servers": [
+          {
+            "url": "https://api.groq.com"
+          }
+        ],
+        "summary": "Specification of the Groq cloud API",
+        "termsOfService": "TBD",
+        "title": "GroqCloud API Swagger",
+        "version": "2.0",
+        "website": "https://groq.com"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "Faisal Misbah",
+        "security": "faisalismisbah23@gmail.com",
+        "url": "https://github.com/FaisalMisbah23"
+      },
+      "repo": {
+        "host": "github.com",
+        "path": "FaisalMisbah23/groq-sdk"
+      },
+      "target": {
+        "py": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "requests": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.33"
+            }
+          },
+          "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "groq",
+            "package": "",
+            "path": ""
+          },
+          "name": "py",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "pypi",
+              "package": "faisalismisbah23-groq-sdk",
+              "state": "pending",
+              "url": "https://pypi.org",
+              "vault": {
+                "alias": "pypi",
+                "env": "",
+                "recipe": "pypi"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
+          "title": "Python"
+        },
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "groq",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "@faisalismisbah23/groq-sdk",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "",
+        "docs_url": "",
+        "entity_desc": {},
+        "homepage": "",
+        "meta_source": "",
+        "summary": "The fast inference API for open-weight large language models.",
+        "tagline": "",
+        "title": "Groq",
+        "website": "https://groq.com"
+      }
+    }
+  },
+  "name": "groq",
+  "name-": "groq",
+  "name_": "groq",
+  "name__orig": "groq",
+  "origin": "voxgig-sdk"
+}

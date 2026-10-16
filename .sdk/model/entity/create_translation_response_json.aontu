@@ -1,0 +1,86 @@
+# Entity: create_translation_response_json
+
+main: kit: entity: create_translation_response_json: {
+
+  alias: field: {}
+
+  fields: {
+    text: {
+      h: "Text"
+      n: "text"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "create_translation_response_json"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /openai/v1/audio/translations"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/openai/v1/audio/translations"
+          rb: {
+            fields: [
+              {
+                binary: true
+                name: "file"
+              }
+              {
+                name: "model"
+              }
+              {
+                name: "prompt"
+              }
+              {
+                name: "response_format"
+              }
+              {
+                name: "temperature"
+              }
+            ]
+            kind: "multipart"
+            media: "multipart/form-data"
+          }
+          rs: {
+            alternatives: [
+              {
+                kind: "raw"
+                media: "text/plain"
+              }
+            ]
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "openai"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "audio"
+            }
+            {
+              lit: "translations"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,18 @@
+# BasicCreateTranslationResponseJsonFlow
+
+main: kit: flow: BasicCreateTranslationResponseJsonFlow:
+{
+  entity: "create_translation_response_json",
+  kind: "basic",
+  name: "BasicCreateTranslationResponseJsonFlow",
+  step: [
+    {
+      i: {
+        ref: "create_translation_response_json_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCreateTranslationResponseJsonFlow"
+}

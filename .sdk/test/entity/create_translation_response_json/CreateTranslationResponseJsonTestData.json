@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "create_translation_response_json": {
+      "CREATE_TRANSLATION_RESPONSE_JSON00": {
+        "text": "sa",
+        "id": "CREATE_TRANSLATION_RESPONSE_JSON00"
+      },
+      "CREATE_TRANSLATION_RESPONSE_JSON01": {
+        "text": "s14",
+        "id": "CREATE_TRANSLATION_RESPONSE_JSON01"
+      },
+      "CREATE_TRANSLATION_RESPONSE_JSON02": {
+        "text": "s1e",
+        "id": "CREATE_TRANSLATION_RESPONSE_JSON02"
+      }
+    }
+  },
+  "new": {
+    "create_translation_response_json": {
+      "create_translation_response_json_ref01": {
+        "text": "s28"
+      }
+    }
+  },
+  "requests": {
+    "POST /openai/v1/audio/translations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+# BasicCreateChatCompletionFlow
+
+main: kit: flow: BasicCreateChatCompletionFlow:
+{
+  entity: "create_chat_completion",
+  kind: "basic",
+  name: "BasicCreateChatCompletionFlow",
+  step: [
+    {
+      i: {
+        ref: "create_chat_completion_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCreateChatCompletionFlow"
+}

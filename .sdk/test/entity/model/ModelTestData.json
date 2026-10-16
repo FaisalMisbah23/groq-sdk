@@ -1,0 +1,50 @@
+{
+  "existing": {
+    "model": {
+      "MODEL00": {
+        "created": 40,
+        "id": "MODEL00",
+        "object": "s2a",
+        "owned_by": "s2b"
+      },
+      "MODEL01": {
+        "created": 80,
+        "id": "MODEL01",
+        "object": "s52",
+        "owned_by": "s53"
+      },
+      "MODEL02": {
+        "created": 120,
+        "id": "MODEL02",
+        "object": "s7a",
+        "owned_by": "s7b"
+      }
+    }
+  },
+  "new": {
+    "model": {
+      "model_ref01": {
+        "created": 160,
+        "object": "sa2",
+        "owned_by": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /openai/v1/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /openai/v1/models/{model}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /openai/v1/models/{model}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
